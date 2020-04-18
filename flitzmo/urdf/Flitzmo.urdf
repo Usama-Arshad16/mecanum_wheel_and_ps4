@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="flitzmo">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="1" />
+      <inertia
+        ixx="0.001"
+        ixy="0.00"
+        ixz="0.00"
+        iyy="0.001"
+        iyz="0.00"
+        izz="0.001" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://flitzmo/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.850980392156863 0.83921568627451 0.858823529411765 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://flitzmo/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="back_left_wheel">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="1" />
+      <inertia
+        ixx="0.001"
+        ixy="0.00"
+        ixz="0.00"
+        iyy="0.001"
+        iyz="0.00"
+        izz="0.001" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://flitzmo/meshes/back_left_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.098039 0.098039 0.098039 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://flitzmo/meshes/front_right_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_to_back_left_wheel"
+    type="fixed">
+    <origin
+      xyz="-0.105 0.225 -0.045"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="back_left_wheel" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="front_left_wheel">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="1" />
+      <inertia
+        ixx="0.001"
+        ixy="0.00"
+        ixz="0.00"
+        iyy="0.001"
+        iyz="0.00"
+        izz="0.001" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://flitzmo/meshes/front_left_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.098039 0.098039 0.098039 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://flitzmo/meshes/front_right_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_to_front_left_wheel"
+    type="fixed">
+    <origin
+      xyz="0.105 0.225 -0.045"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_left_wheel" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="front_right_wheel">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="1" />
+      <inertia
+        ixx="0.001"
+        ixy="0.00"
+        ixz="0.00"
+        iyy="0.001"
+        iyz="0.00"
+        izz="0.001" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://flitzmo/meshes/front_right_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.098039 0.098039 0.098039 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://flitzmo/meshes/front_right_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_to_front_right_wheel"
+    type="fixed">
+    <origin
+      xyz="0.105 -0.265 -0.045"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_right_wheel" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="back_right_wheel">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="1" />
+      <inertia
+        ixx="0.001"
+        ixy="0.00"
+        ixz="0.00"
+        iyy="0.001"
+        iyz="0.00"
+        izz="0.001" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://flitzmo/meshes/back_right_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.098039 0.098039 0.098039 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://flitzmo/meshes/front_right_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_to_back_right_wheel"
+    type="fixed">
+    <origin
+      xyz="-0.105 -0.265 -0.045"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="back_right_wheel" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+
+<!--gazebo>
+  <controller:mecanum_drive_plugin name="mecanum_drive_controller" plugin="libmecanum_plugin.so">
+    <alwaysOn>true</alwaysOn>
+    <update>100</update>
+    <updateRate>100.0</updateRate>
+    <frontLeftJoint>base_to_front_left_wheel</frontLeftJoint>
+    <frontRightJoint>base_to_front_right_wheel</frontRightJoint>
+    <backLeftJoint>base_to_back_left_wheel</backLeftJoint>
+    <backRightJoint>base_to_back_right_wheel</backRightJoint>
+    <robotWidth>0.27</robotWidth>   
+    <robotLength>0.25</robotLength> 
+    <wheelDiameter>0.26</wheelDiameter>
+    <torque>5</torque>
+    <interface:position name="position_iface_0"/>
+    <topicName>cmd_vel</topicName>
+  </controller:mecanum_drive_plugin>
+</gazebo-->
+
+  <gazebo>
+    <plugin name="mpo_500_controller" filename="libgazebo_ros_planar_move.so">
+      <commandTopic>cmd_vel</commandTopic>
+      <odometryTopic>odom</odometryTopic>
+      <odometryFrame>odom</odometryFrame>
+      <odometryRate>20.0</odometryRate>
+      <robotBaseFrame>base_link</robotBaseFrame>
+    </plugin>
+  </gazebo>
+
+
+  <link
+    name="Front_lidar">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="1" />
+      <inertia
+        ixx="0.001"
+        ixy="0.00"
+        ixz="0.00"
+        iyy="0.001"
+        iyz="0.00"
+        izz="0.001" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://flitzmo/meshes/Front_lidar.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.082353 0.086275 0.098039 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://flitzmo/meshes/Front_lidar.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_to_Front_lidar"
+    type="fixed">
+    <origin
+      xyz="0.15 0.22 0.19"
+      rpy="0 0 45" />
+    <parent
+      link="base_link" />
+    <child
+      link="Front_lidar" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="back_lidar">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="1" />
+      <inertia
+        ixx="0.001"
+        ixy="0.00"
+        ixz="0.00"
+        iyy="0.001"
+        iyz="0.00"
+        izz="0.001" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://flitzmo/meshes/back_lidar.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://flitzmo/meshes/back_lidar.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_to_back_lidar"
+    type="fixed">
+    <origin
+      xyz="-0.15 -0.26 0.19"
+      rpy="0 0 135" />
+    <parent
+      link="base_link" />
+    <child
+      link="back_lidar" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+    <gazebo reference="Front_lidar">
+      <turnGravityOff>true</turnGravityOff>
+      <sensor type="ray" name="Front_lidar">
+        <pose>0 0 0 0 0 0</pose>
+        <visualize>false</visualize>
+        <update_rate>40</update_rate>
+        <ray>
+          <scan>
+            <horizontal>
+              <samples>720</samples>
+              <resolution>1</resolution>
+                <min_angle>-2.25</min_angle>
+                <max_angle>2.25</max_angle>
+            </horizontal>
+          </scan>
+          <range>
+              <min>0.10</min>
+              <max>30.0</max>
+            <resolution>0.01</resolution>
+          </range>
+          <noise>
+            <type>gaussian</type>
+            <mean>0.0</mean>
+            <stddev>0.001</stddev>
+          </noise>
+        </ray>
+        <plugin name="gazebo_ros_laser" filename="libgazebo_ros_laser.so">
+          <topicName>Front_lidar_scan</topicName>
+          <frameName>Front_lidar</frameName>
+        </plugin>
+      </sensor>
+    </gazebo>
+
+
+    <gazebo reference="back_lidar">
+      <turnGravityOff>true</turnGravityOff>
+      <sensor type="ray" name="back_lidar">
+        <pose>0 0 0 0 0 0</pose>
+        <visualize>false</visualize>
+        <update_rate>40</update_rate>
+        <ray>
+          <scan>
+            <horizontal>
+              <samples>720</samples>
+              <resolution>1</resolution>
+                <min_angle>-2.25</min_angle>
+                <max_angle>2.25</max_angle>
+            </horizontal>
+          </scan>
+          <range>
+              <min>0.10</min>
+              <max>30.0</max>
+            <resolution>0.01</resolution>
+          </range>
+          <noise>
+            <type>gaussian</type>
+            <mean>0.0</mean>
+            <stddev>0.001</stddev>
+          </noise>
+        </ray>
+        <plugin name="gazebo_ros_laser" filename="libgazebo_ros_laser.so">
+          <topicName>back_lidar_scan</topicName>
+          <frameName>back_lidar</frameName>
+        </plugin>
+      </sensor>
+    </gazebo>
+
+
+</robot>
